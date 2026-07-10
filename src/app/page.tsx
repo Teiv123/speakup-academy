@@ -107,7 +107,7 @@ function CourseCard({ course }: { course: Course }) {
           <p className="text-lg font-bold text-indigo-600 dark:text-indigo-400">{course.price}</p>
         </div>
         <a
-          href="#dang-ky"
+          href="/signup"
           className="rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-indigo-500"
         >
           Đăng ký
@@ -158,16 +158,24 @@ export default function Home() {
             <a href="#hoc-vien" className="transition hover:text-indigo-600 dark:hover:text-indigo-400">
               Học viên nói gì
             </a>
-            <a href="#dang-ky" className="transition hover:text-indigo-600 dark:hover:text-indigo-400">
+            <a href="/signup" className="transition hover:text-indigo-600 dark:hover:text-indigo-400">
               Học thử
             </a>
           </div>
-          <a
-            href="#dang-ky"
-            className="rounded-full bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-500"
-          >
-            Đăng ký
-          </a>
+          <div className="flex items-center gap-3">
+            <Link
+              href="/login"
+              className="text-sm font-semibold text-zinc-700 transition hover:text-indigo-600 dark:text-zinc-200 dark:hover:text-indigo-400"
+            >
+              Đăng nhập
+            </Link>
+            <Link
+              href="/signup"
+              className="rounded-full bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-500"
+            >
+              Đăng ký
+            </Link>
+          </div>
         </nav>
       </header>
 
@@ -190,7 +198,7 @@ export default function Home() {
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href="#dang-ky"
+              href="/signup"
               className="w-full rounded-full bg-indigo-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-indigo-600/20 transition hover:bg-indigo-500 sm:w-auto"
             >
               Đăng ký học thử miễn phí
@@ -268,7 +276,7 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
-                href="mailto:hello@speakup.academy?subject=Đăng ký học thử miễn phí"
+                href="/signup"
                 className="w-full rounded-full bg-white px-8 py-3.5 text-base font-semibold text-indigo-700 shadow-lg transition hover:bg-indigo-50 sm:w-auto"
               >
                 Đăng ký ngay
