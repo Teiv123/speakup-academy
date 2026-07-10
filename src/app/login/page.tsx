@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
+import GoogleAuthButton from "@/components/GoogleAuthButton";
 
 const inputCls =
   "w-full rounded-lg border border-zinc-300 bg-white px-3.5 py-2.5 text-sm outline-none transition focus:border-indigo-500 dark:border-zinc-700 dark:bg-zinc-950";
@@ -57,6 +58,12 @@ export default function LoginPage() {
             </button>
             {msg && <p className="text-sm text-red-500">{msg}</p>}
           </form>
+          <div className="my-5 flex items-center gap-3 text-xs text-zinc-400">
+            <span className="h-px flex-1 bg-zinc-200 dark:bg-zinc-700" />
+            hoặc
+            <span className="h-px flex-1 bg-zinc-200 dark:bg-zinc-700" />
+          </div>
+          <GoogleAuthButton label="Đăng nhập với Google" />
         </div>
         <p className="mt-5 text-center text-sm text-zinc-500 dark:text-zinc-400">
           Chưa có tài khoản?{" "}
