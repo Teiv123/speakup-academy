@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AuthNav from "@/components/AuthNav";
 
 type Course = {
   icon: string;
@@ -162,20 +163,7 @@ export default function Home() {
               Học thử
             </a>
           </div>
-          <div className="flex items-center gap-3">
-            <Link
-              href="/login"
-              className="text-sm font-semibold text-zinc-700 transition hover:text-indigo-600 dark:text-zinc-200 dark:hover:text-indigo-400"
-            >
-              Đăng nhập
-            </Link>
-            <Link
-              href="/signup"
-              className="rounded-full bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-500"
-            >
-              Đăng ký
-            </Link>
-          </div>
+          <AuthNav />
         </nav>
       </header>
 
